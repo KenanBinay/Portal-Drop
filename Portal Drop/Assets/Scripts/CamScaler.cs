@@ -10,7 +10,6 @@ public class CamScaler : MonoBehaviour
         Camera.main.orthographicSize = rink.bounds.size.x + Screen.height / Screen.width * 0.5f;
     }
 
-    
     void Update()
     {
         

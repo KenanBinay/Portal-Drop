@@ -18,7 +18,6 @@ public class Wall : MonoBehaviour
 
         if (collision.gameObject.tag == "WallDetect")
         {
-            Debug.Log("collision!!");
             Destroy(wall1);
             Destroy(wall2);
         }
