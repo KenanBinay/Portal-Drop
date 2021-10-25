@@ -22,7 +22,7 @@ public class WallSpawn : MonoBehaviour
 
 			nextSpawn = Time.time + spawnRate;
 
-			randY = Random.Range(-9f,-4f);
+			randY = Random.Range(-15f,-8.5f);
 
 			whereToSpawn = new Vector2(transform.position.x, randY);
 
