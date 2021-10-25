@@ -16,6 +16,15 @@ public class Character : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            if (Score.scoreValue > PlayerPrefs.GetFloat("HighScore", 0))
+            {
+                PlayerPrefs.SetFloat("HighScore",Score.scoreValue);
+                Debug.Log("HigScore Saved = "+ PlayerPrefs.GetFloat("HighScore"));
+            }
+
+        }
         if (collision.gameObject.CompareTag("portalDown"))
         {
             transform.position = new Vector3(-1.804f, 4f, 0f);

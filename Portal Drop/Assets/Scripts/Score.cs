@@ -5,27 +5,29 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text score;
-    float scoreValue;
+    public static float scoreValue;
     float scoreRate=1.5f;
     float scorespeed = 0.0f;
 
     void Start()
     {
-       
+        Debug.Log("HigScore = " + PlayerPrefs.GetFloat("HighScore"));
     }
 
     void Update()
     {
         if (Time.time > scorespeed)
         {
-            
+          //  int scorenumb = 0;
+
             scorespeed = Time.time + scoreRate;
 
             if (scoreValue < 40)
             {
-             
+               
                 scoreValue++;
                 score.text = scoreValue.ToString();
+
             }
 
             if (scoreValue >= 40)
@@ -43,6 +45,7 @@ public class Score : MonoBehaviour
                 // scoreValue = scoreValue + 2;
                 score.text = scoreValue.ToString();
             }
+         
         }
     }
 }
