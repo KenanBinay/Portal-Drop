@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Rigidbody2D Character;
-    public GameObject CharacterGo;
+    public Rigidbody2D character;
     public float SpeedCharacter;
 
+    private void Start()
+    {
+        character.gravityScale = 0f;
+    }
     public void OnMouseExit()
     {
 
     }
     public void OnMouseDrag()
     {
+        character.gravityScale = 1f;
         // Character.gravityScale = 0f;
         // Character.mass = 0f;
-        Character.GetComponent<Rigidbody2D>().AddForce(Vector2.up * SpeedCharacter);
+        character.GetComponent<Rigidbody2D>().AddForce(Vector2.up * SpeedCharacter);
         //  Character.AddForce(Vector2.up * SpeedCharacter);
        //  CharacterGo.transform.Translate(Vector2.up * SpeedCharacter, Space.World);     
     }
