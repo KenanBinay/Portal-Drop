@@ -8,7 +8,7 @@ public class WallSpawn : MonoBehaviour
 	float randY;
 	Vector2 whereToSpawn;
 	public float spawnRate;
-	float nextSpawn = 0.0f;
+	public static float nextSpawn = 0.0f;
 	
 	void Start()
 	{
@@ -17,17 +17,20 @@ public class WallSpawn : MonoBehaviour
 
 	public void FixedUpdate()
 	{
-		if (Time.time > nextSpawn)
+		if (Character.ScoreControl <= 0f)
 		{
+			if (Time.time > nextSpawn)
+			{
 
-			nextSpawn = Time.time + spawnRate;
+				nextSpawn = Time.time + spawnRate;
 
-			randY = Random.Range(-15f,-8.5f);
+				randY = Random.Range(-15f, -8.5f);
 
-			whereToSpawn = new Vector2(transform.position.x, randY);
+				whereToSpawn = new Vector2(transform.position.x, randY);
 
-			Instantiate(wall, whereToSpawn, Quaternion.identity);
+				Instantiate(wall, whereToSpawn, Quaternion.identity);
+			}
+
 		}
-		
 	}
 }

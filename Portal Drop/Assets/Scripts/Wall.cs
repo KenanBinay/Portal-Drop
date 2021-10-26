@@ -22,5 +22,7 @@ public class Wall : MonoBehaviour
             Destroy(wall2);
         }
 
+       
+
     }
 }

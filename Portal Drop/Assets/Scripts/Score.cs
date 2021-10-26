@@ -6,46 +6,51 @@ public class Score : MonoBehaviour
 {
     public Text score;
     public static float scoreValue;
-    float scoreRate=1.5f;
+    float scoreRate = 1.5f;
     float scorespeed = 0.0f;
 
     void Start()
     {
         Debug.Log("HigScore = " + PlayerPrefs.GetFloat("HighScore"));
+      
     }
 
     void Update()
     {
-        if (Time.time > scorespeed)
+        if (Character.ScoreControl != 1f)
         {
-          //  int scorenumb = 0;
-
-            scorespeed = Time.time + scoreRate;
-
-            if (scoreValue < 40)
+            if (Time.time > scorespeed)
             {
-               
-                scoreValue++;
-                score.text = scoreValue.ToString();
+                //  int scorenumb = 0;
+
+                scorespeed = Time.time + scoreRate;
+
+                if (scoreValue < 40)
+                {
+
+                    scoreValue++;
+                    score.text = scoreValue.ToString();
+
+                }
+
+                if (scoreValue >= 40)
+                {
+                    scoreRate = 1f;
+                    scoreValue++;
+                    // scoreValue = scoreValue + 2;
+                    score.text = scoreValue.ToString();
+                }
+
+                if (scoreValue >= 90)
+                {
+                    scoreRate = 0.5f;
+                    scoreValue++;
+                    // scoreValue = scoreValue + 2;
+                    score.text = scoreValue.ToString();
+                }
 
             }
 
-            if (scoreValue >= 40)
-            {
-                scoreRate = 1f;
-                scoreValue++;
-                // scoreValue = scoreValue + 2;
-                score.text = scoreValue.ToString();
-            }
-
-            if (scoreValue >= 90)
-            {
-                scoreRate = 0.5f;
-                scoreValue++;
-                // scoreValue = scoreValue + 2;
-                score.text = scoreValue.ToString();
-            }
-         
         }
     }
 }
