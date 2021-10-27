@@ -12,6 +12,7 @@ public class GoMenu : MonoBehaviour
      
     public void backToMenu()
     {
+
         SceneManager.LoadScene("Menu");
     }
 }

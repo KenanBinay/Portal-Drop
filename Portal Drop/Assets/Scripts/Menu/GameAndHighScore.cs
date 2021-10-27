@@ -17,6 +17,8 @@ public class GameAndHighScore : MonoBehaviour
 
     public void GameStart()
     {
+        Character.ScoreControl = 0f;
+        Score.scoreValue = 0f;        
         SceneManager.LoadScene("GamePlay");
     }
 }
