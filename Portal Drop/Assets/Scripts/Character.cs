@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-   public float spinSpeed;
-   public static float ScoreControl;
+    public float spinSpeed;
+    public static float ScoreControl;
+    public GameObject ScoreObject;
+
     void Start()
     {
         ScoreControl = 0f;
@@ -15,7 +17,6 @@ public class Character : MonoBehaviour
     {
         gameObject.transform.Rotate(Vector3.back * spinSpeed, Space.World);
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,6 +30,8 @@ public class Character : MonoBehaviour
                 Debug.Log("HigScore Saved = "+ PlayerPrefs.GetFloat("HighScore"));
             }
         }
+
+        
         if (collision.gameObject.CompareTag("portalDown"))
         {
             transform.position = new Vector3(-1.804f, 4f, 0f);

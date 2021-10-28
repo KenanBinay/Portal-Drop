@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    public float WallSpeed;
-   
+    public static float WallSpeed;
+    private void Start()
+    {
+        WallSpeed = 0.009f;
+    }
     private void Update()
     {
         transform.Translate(Vector2.left * WallSpeed, Space.World);

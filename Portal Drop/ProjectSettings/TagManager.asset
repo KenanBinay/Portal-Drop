@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - portalDown
   - portalUp
+  - Character
+  - Score
   layers:
   - Default
   - TransparentFX
