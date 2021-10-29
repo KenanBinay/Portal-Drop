@@ -14,6 +14,7 @@ public class Restart : MonoBehaviour
     {
         Score.scoreValue = 0f;
         Character.ScoreControl = 0f;
+        GameOver.rewardCountdown = 10f;
         SceneManager.LoadScene("GamePlay");
     }
 }

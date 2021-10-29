@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class GoMenu : MonoBehaviour
+
+public class RewardedAds : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         
     }
-     
-    public void backToMenu()
+
+    // Update is called once per frame
+    void Update()
     {
-        GameOver.rewardCountdown = 10f;
-        SceneManager.LoadScene("Menu");
+        
     }
 }

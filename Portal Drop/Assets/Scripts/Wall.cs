@@ -7,7 +7,7 @@ public class Wall : MonoBehaviour
     public static float WallSpeed;
     private void Start()
     {
-        WallSpeed = 0.009f;
+      
     }
     private void Update()
     {

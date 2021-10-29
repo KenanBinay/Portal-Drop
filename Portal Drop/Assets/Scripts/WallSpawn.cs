@@ -17,7 +17,7 @@ public class WallSpawn : MonoBehaviour
 	
 	void Start()
 	{
-		spawnRate = 6f;
+		
 	}
 
 	public void FixedUpdate()
@@ -31,47 +31,62 @@ public class WallSpawn : MonoBehaviour
 
 				randY = Random.Range(-15f, -8.5f);
 
-				ScoreRandY = Random.Range(-3.5f, 3.3f);
+				ScoreRandY = Random.Range(-3.5f, 3.5f);
 
-				ScoreRandx = Random.Range(5f, 6.2f);
+				ScoreRandx = Random.Range(4.5f, 5.5f);
 
 				whereToSpawn = new Vector2(transform.position.x, randY);
 
 				whereToSpawnScore = new Vector2(ScoreRandx, ScoreRandY);
 
-                if (Score.scoreValue <= 30)
+                if (Score.scoreValue <= 91)
                 {
+					spawnRate = 6f;
 					ScoreManagment.ScoreSpeed = 0.009f;
+					Wall.WallSpeed = 0.009f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
 					if (Score.scoreValue % 5 == 1)
 					{
 						Instantiate(ScoreObject, whereToSpawnScore, Quaternion.identity);
 					}
 				}
-				if (Score.scoreValue >= 31 && Score.scoreValue <= 60)
+
+				if (Score.scoreValue >= 91&&Score.scoreValue <= 121)
 				{
-					Wall.WallSpeed = 0.018f;
-					ScoreManagment.ScoreSpeed = 0.018f;
 					spawnRate = 5f;
+					ScoreManagment.ScoreSpeed = 0.009f;
+					Wall.WallSpeed = 0.009f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
                     if (Score.scoreValue % 2 == 1)
                     {
 						Instantiate(ScoreObject, whereToSpawnScore, Quaternion.identity);
 					}				
 				}
-				if (Score.scoreValue >= 61 && Score.scoreValue >= 90)
+
+				if (Score.scoreValue >=121 && Score.scoreValue <= 151)
 				{
-					Wall.WallSpeed = 0.027f;
-					ScoreManagment.ScoreSpeed = 0.027f;
 					spawnRate = 4f;
+					ScoreManagment.ScoreSpeed = 0.009f;
+					Wall.WallSpeed = 0.009f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
 					if (Score.scoreValue % 2 == 1)
 					{
 						Instantiate(ScoreObject, whereToSpawnScore, Quaternion.identity);
 					}
 				}
-				
-				
+
+
+				if (Score.scoreValue >= 151)
+				{
+					spawnRate = 3f;
+					ScoreManagment.ScoreSpeed = 0.009f;
+					Wall.WallSpeed = 0.009f;
+					Instantiate(wall, whereToSpawn, Quaternion.identity);
+					if (Score.scoreValue % 2 == 1)
+					{
+						Instantiate(ScoreObject, whereToSpawnScore, Quaternion.identity);
+					}
+				}
 			}
 
 		}

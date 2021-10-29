@@ -11,10 +11,19 @@ public class GameOver : MonoBehaviour
     float scoreRate = 1.5f;
     public GameObject gameEnd;
     public GameObject character;
+    public GameObject CloseReward;
+    public GameObject CloseIconReward;
+    public Text Countdown;
     float BestScore;
+
+
+    float RewardRate = 1.5f;
+    public static float rewardCountdown=10f;
     void Start()
     {
         gameEnd.SetActive(false);
+        CloseReward.SetActive(false);
+        CloseIconReward.SetActive(false);
 
     }
 
@@ -22,19 +31,48 @@ public class GameOver : MonoBehaviour
     {
         if (Character.ScoreControl >= 1f)
         {
+           
             character.SetActive(false);
-            gameEnd.SetActive(true);
-            BestScore = PlayerPrefs.GetFloat("HighScore",0);
-            highScore.text = BestScore.ToString(); 
-            if (Time.time != scorespeed)
-            {
-                scorespeed = Time.time + scoreRate;
-                if (GameoverScore != Score.scoreValue)
-                {
-                    GameoverScore++;
-                    score2.text = GameoverScore.ToString();
-                }
+            ExtraLifeShow();
+        }
+     
+    }
+    private void ExtraLifeShow()
+    {
+        if (rewardCountdown <= 0f)
+        {
 
+            CloseIconReward.SetActive(false);
+            CloseReward.SetActive(false);
+
+            gameEnd.SetActive(true);
+            GameEndShow();
+
+        }
+        else
+        {
+            CloseIconReward.SetActive(true);
+            CloseReward.SetActive(true);
+            if (Time.time > scorespeed)
+            {
+                scorespeed = Time.time + RewardRate;
+                Countdown.text = rewardCountdown.ToString();
+                rewardCountdown--;           
+            }
+        }
+    }
+    private void GameEndShow()
+    {
+
+        BestScore = PlayerPrefs.GetFloat("HighScore", 0);
+        highScore.text = BestScore.ToString();
+        if (Time.time != scorespeed)
+        {
+            scorespeed = Time.time + scoreRate;
+            if (GameoverScore != Score.scoreValue)
+            {
+                GameoverScore++;
+                score2.text = GameoverScore.ToString();
             }
         }
         else
