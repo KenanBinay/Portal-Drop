@@ -18,14 +18,11 @@ public class Wall : MonoBehaviour
     public GameObject wall2;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "WallDetect")
         {
             Destroy(wall1);
             Destroy(wall2);
         }
-
-       
 
     }
 }

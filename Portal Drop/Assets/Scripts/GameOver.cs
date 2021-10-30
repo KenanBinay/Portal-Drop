@@ -16,17 +16,16 @@ public class GameOver : MonoBehaviour
     public Text Countdown;
     float BestScore;
 
-
     float RewardRate = 1.5f;
     public static float rewardCountdown=10f;
+
+
     void Start()
     {
         gameEnd.SetActive(false);
         CloseReward.SetActive(false);
         CloseIconReward.SetActive(false);
-
     }
-
     void Update()
     {
         if (Character.ScoreControl >= 1f)
@@ -34,14 +33,12 @@ public class GameOver : MonoBehaviour
            
             character.SetActive(false);
             ExtraLifeShow();
-        }
-     
+        }   
     }
     private void ExtraLifeShow()
     {
         if (rewardCountdown <= 0f)
         {
-
             CloseIconReward.SetActive(false);
             CloseReward.SetActive(false);
 
@@ -50,9 +47,10 @@ public class GameOver : MonoBehaviour
 
         }
         else
-        {
+        {        
             CloseIconReward.SetActive(true);
             CloseReward.SetActive(true);
+
             if (Time.time > scorespeed)
             {
                 scorespeed = Time.time + RewardRate;
@@ -63,7 +61,6 @@ public class GameOver : MonoBehaviour
     }
     private void GameEndShow()
     {
-
         BestScore = PlayerPrefs.GetFloat("HighScore", 0);
         highScore.text = BestScore.ToString();
         if (Time.time != scorespeed)

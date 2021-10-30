@@ -53,9 +53,9 @@ public class WallSpawn : MonoBehaviour
 
 				if (Score.scoreValue >= 91&&Score.scoreValue <= 121)
 				{
-					spawnRate = 5f;
-					ScoreManagment.ScoreSpeed = 0.009f;
-					Wall.WallSpeed = 0.009f;
+					spawnRate = 4f;
+					ScoreManagment.ScoreSpeed = 0.015f;
+					Wall.WallSpeed = 0.015f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
                     if (Score.scoreValue % 2 == 1)
                     {
@@ -63,11 +63,11 @@ public class WallSpawn : MonoBehaviour
 					}				
 				}
 
-				if (Score.scoreValue >=121 && Score.scoreValue <= 151)
+				if (Score.scoreValue >=121 && Score.scoreValue <= 699)
 				{
-					spawnRate = 4f;
-					ScoreManagment.ScoreSpeed = 0.009f;
-					Wall.WallSpeed = 0.009f;
+					spawnRate = 3f;
+					ScoreManagment.ScoreSpeed = 0.020f;
+					Wall.WallSpeed = 0.020f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
 					if (Score.scoreValue % 2 == 1)
 					{
@@ -75,21 +75,18 @@ public class WallSpawn : MonoBehaviour
 					}
 				}
 
-
-				if (Score.scoreValue >= 151)
+				if (Score.scoreValue >= 700)
 				{
 					spawnRate = 3f;
-					ScoreManagment.ScoreSpeed = 0.009f;
-					Wall.WallSpeed = 0.009f;
+					ScoreManagment.ScoreSpeed = 0.030f;
+					Wall.WallSpeed = 0.030f;
 					Instantiate(wall, whereToSpawn, Quaternion.identity);
-					if (Score.scoreValue % 2 == 1)
+					if (Score.scoreValue % 50 == 1)
 					{
 						Instantiate(ScoreObject, whereToSpawnScore, Quaternion.identity);
 					}
 				}
 			}
-
 		}
-	}
-	
+	}	
 }
