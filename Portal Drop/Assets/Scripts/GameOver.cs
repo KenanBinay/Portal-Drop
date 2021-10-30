@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour
 {
     public Text score2;
     public Text highScore;
-    float GameoverScore;
+    float GameoverScore=0f;
     float scorespeed = 0.0f;
     float scoreRate = 1.5f;
     public GameObject gameEnd;
