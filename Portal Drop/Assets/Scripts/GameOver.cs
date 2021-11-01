@@ -21,10 +21,9 @@ public class GameOver : MonoBehaviour
     float RewardRate = 1.5f;
     public static float rewardCountdown=10f;
 
-
     void Start()
     {
-       
+        rewardCountdown = 10f;
         gameEnd.SetActive(false);
         CloseReward.SetActive(false);
         CloseIconReward.SetActive(false);
