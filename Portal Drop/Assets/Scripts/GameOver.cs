@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
+
 public class GameOver : MonoBehaviour
 {
     public Text score2;
@@ -22,6 +24,7 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
+       
         gameEnd.SetActive(false);
         CloseReward.SetActive(false);
         CloseIconReward.SetActive(false);
@@ -47,16 +50,26 @@ public class GameOver : MonoBehaviour
 
         }
         else
-        {        
-            CloseIconReward.SetActive(true);
-            CloseReward.SetActive(true);
-
-            if (Time.time > scorespeed)
+        {
+            if (Advertisement.IsReady("Rewarded_Android"))
             {
-                scorespeed = Time.time + RewardRate;
-                Countdown.text = rewardCountdown.ToString();
-                rewardCountdown--;           
+                CloseIconReward.SetActive(true);
+                CloseReward.SetActive(true);
+
+                if (Time.time > scorespeed)
+                {
+                    scorespeed = Time.time + RewardRate;
+                    Countdown.text = rewardCountdown.ToString();
+                    rewardCountdown--;
+                }
             }
+            else
+            {
+                Debug.Log("Rewarded is not ready!!");
+                gameEnd.SetActive(true);
+                GameEndShow();
+            }
+           
         }
     }
     private void GameEndShow()
