@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreObject: {fileID: 3067872452800487918}
+  OnGetScore: {fileID: 2100000, guid: 260e0a499480d8f49af7d76cd3c099d1, type: 2}

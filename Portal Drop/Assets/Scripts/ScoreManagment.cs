@@ -6,9 +6,10 @@ public class ScoreManagment : MonoBehaviour
 {
     public static float ScoreSpeed;
     public GameObject ScoreObject;
+
     private void Start()
     {
-        ScoreSpeed = 0.009f;
+    
     }
 
     private void Update()
@@ -24,9 +25,19 @@ public class ScoreManagment : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Character"))
         {
+
             Score.scoreValue += 10;
             Debug.Log("ScoreEarned");
+          //  StartCoroutine(GetColor());
             Destroy(ScoreObject);
+     
         }
     }
+ /*   public IEnumerator GetColor()
+    {
+        yield return new WaitForSeconds(0.30f);
+
+        Debug.Log("ColorChange");
+    }
+   */
 }
