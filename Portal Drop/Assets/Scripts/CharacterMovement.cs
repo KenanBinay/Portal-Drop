@@ -7,9 +7,13 @@ public class CharacterMovement : MonoBehaviour
     public Rigidbody2D character;
     public float SpeedCharacter;
 
+    public GameObject TutoObject1;
+    public GameObject TutoObject2;
+    public GameObject TutoObject3;
     private void Start()
     {
         character.gravityScale = 0f;
+     
     }
     public void OnMouseExit()
     {
@@ -17,6 +21,9 @@ public class CharacterMovement : MonoBehaviour
     }
     public void OnMouseDrag()
     {
+        Destroy(TutoObject1);
+        Destroy(TutoObject2);
+        Destroy(TutoObject3);
         character.gravityScale = 1f;
         // Character.gravityScale = 0f;
         // Character.mass = 0f;

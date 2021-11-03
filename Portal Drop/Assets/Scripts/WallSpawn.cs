@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WallSpawn : MonoBehaviour
 {
-	public GameObject wall;
-	public GameObject ScoreObject;
+	[SerializeField] public GameObject wall;
+	[SerializeField] public GameObject ScoreObject;
 
 	float randY;
 	float ScoreRandY;
@@ -39,7 +39,7 @@ public class WallSpawn : MonoBehaviour
 
 				whereToSpawnScore = new Vector2(ScoreRandx, ScoreRandY);
 
-                if (Score.scoreValue <= 91)
+                if (Score.scoreValue>=4&&Score.scoreValue <= 91)
                 {
 					spawnRate = 6f;
 					ScoreManagment.ScoreSpeed = 0.020f;
