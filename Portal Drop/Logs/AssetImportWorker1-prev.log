@@ -110,3 +110,84 @@ Received Import Request.
 Start importing Assets/Sprites/GameLogo.jpg using Guid(7e71e3b806c79a848a363826fa3d194c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0065537b121e83bb2fb2cbbdf64765a') in 0.134804 seconds
   Import took 0.147713 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 219.066501 seconds.
+  path: Assets/Sprites/GameLogo.jpg
+  artifactKey: Guid(7e71e3b806c79a848a363826fa3d194c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/GameLogo.jpg using Guid(7e71e3b806c79a848a363826fa3d194c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e936a02b35b1ee93585b6c6683e8b4e') in 0.032674 seconds
+  Import took 0.044444 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 15.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 103.3 MB.
+System memory in use after: 103.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 4952.
+Total: 5.028800 ms (FindLiveObjects: 0.374200 ms CreateObjectMapping: 0.258700 ms MarkObjects: 4.261800 ms  DeleteObjects: 0.132000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 285.913109 seconds.
+  path: Assets/Sprites/GameLogo2.jpg
+  artifactKey: Guid(9eac36a269264d24ba459f6dd676f623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/GameLogo2.jpg using Guid(9eac36a269264d24ba459f6dd676f623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a34a0ce9593d10679e22be998bc8ed14') in 0.046482 seconds
+  Import took 0.067742 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 33.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 103.4 MB.
+System memory in use after: 103.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 4952.
+Total: 6.505600 ms (FindLiveObjects: 0.464300 ms CreateObjectMapping: 0.346200 ms MarkObjects: 5.567700 ms  DeleteObjects: 0.125900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 6665.197256 seconds.
+  path: Assets/Sprites/GameLogo3.png
+  artifactKey: Guid(2630e16b6e027294b992ca22be448b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/GameLogo3.png using Guid(2630e16b6e027294b992ca22be448b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '191ad3d2ae387255faae24c93334f76f') in 0.185062 seconds
+  Import took 0.306774 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 21.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 103.4 MB.
+System memory in use after: 103.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 4952.
+Total: 32.255400 ms (FindLiveObjects: 0.416800 ms CreateObjectMapping: 0.266100 ms MarkObjects: 31.449400 ms  DeleteObjects: 0.121400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11574.056485 seconds.
+  path: Assets/Sprites/GameLogo4.png
+  artifactKey: Guid(175678c04cee9ac4fbeb62a8bf462647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/GameLogo4.png using Guid(175678c04cee9ac4fbeb62a8bf462647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaf9a21b0f3e989fae525fdae1280ae') in 0.158029 seconds
+  Import took 0.271423 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 87.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 103.4 MB.
+System memory in use after: 103.5 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 4952.
+Total: 55.595200 ms (FindLiveObjects: 0.511100 ms CreateObjectMapping: 4.108900 ms MarkObjects: 50.841800 ms  DeleteObjects: 0.131900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
